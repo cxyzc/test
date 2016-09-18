@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+		
+		    /* CSS初始化 */
+		    body,ul,ol,dl,dd,p,h1,h2,h3,h4,h5,h6,p,div{
+		    	margin: 0;
+		    	padding: 0;
+		    	font-size: 12px;
+		    	font-family: "宋体";
+		    }
+			input,img {
+				 margin: 0;
+				 padding: 0;
+				 border: 0 none;
+				 outline-style: none;
+			}
+			a {
+				 text-decoration: none;
+			}
+			ul {
+				 list-style: none;
+			}
+		    .clearfix:after {
+		    	 content: "";
+		    	 height: 0;
+		    	 line-height: 0;
+		    	 clear: both;
+		    	 display: block;
+		    	 visibility: hidden;
+		    }
+		    .box {
+		    	 width: 980px;
+		    	 margin: 0 auto;
+		    }
+
+			/* 头部分开始 */
+			.header {
+			
+			}
+			.logo {
+				 float: left;
+			}
+
+			.logo a {
+			     height: 45px;
+			     display: inline-block;
+			     background: url(images/logo.jpg) no-repeat;
+			     text-indent: -2000px;
+			     width: 179px;
+			}
+			
+			.serch {
+				 float: right;
+				 height: 28px;
+				 border: 1px solid #D2D2D2;
+				 border-radius: 3px;  /* 圆角显示 */
+				 margin-top: 5px;
+			}
+
+			.serch .txt {
+				 width: 165px;
+				 height: 28px;
+				 padding-left: 6px;
+				 color: #ACACAC;
+				 float: left;
+			}
+
+			.serch .btn {
+				  height: 28px;
+				  width: 31px;
+				  background: url(images/search2.jpg) no-repeat;
+				  float: left;
+			}
+
+
+			/* 导航部分开始 */
+
+			.nav {
+				  background: url(images/nav_bg.png);
+				  height: 55px;
+				  border-top: 1px solid #E1E1E1;
+			}
+
+			.nav .box li {
+				 float: left;
+				 background: url(images/nav_bg-line.png) right no-repeat;
+			}
+
+			.nav .box li a {
+				 height: 55px;
+				 padding: 0 35px;
+				 color: #000000;
+				 font-family: "微软雅黑";
+				 font-size: 14px;
+				 line-height: 55px;
+			}
+			.nav  li a:hover {
+				 color: #76B800;
+			}
+
+
+			/* Banner部分开始 */
+			.banner {
+
+			}
+
+			/* 新闻推送部分 */
+
+			.news {
+				  height: 29px;
+				  border-top: 1px solid #EFEFEF;
+				  border-bottom: 1px solid #EFEFEF;
+				  background-color: #FBFBFB;
+				  margin-bottom: 15px;
+			}
+
+			.news-title {
+				 float: left;
+			}
+
+			.news-title h5,.news-title p {
+				 float: left;
+				 line-height: 29px;
+			}
+
+			.news-img {
+				 float: right;
+				 line-height: 29px;
+			}
+
+			.news-img img {
+				 vertical-align: middle;
+			}
+
+
+			/* 产品列表 */
+			.product {
+
+			}
+
+			.l-product {
+				 width: 310px;
+				 height: 224px;
+				 border: 1px solid #E4E4E4; 
+				 float: left;
+			}
+
+			.m-product {
+				  width: 373px;
+				  height: 224px;
+				  border: 1px solid #E4E4E4; 
+				  float: left;
+				  margin-left: 12px;
+			}
+
+			.r-product {
+				 width: 268px;
+				 height: 224px;
+				 border: 1px solid #E4E4E4; 
+				 float: right;
+			}
+
+			.public-title {
+				 margin-top: 12px;
+				 margin-left: 6px;
+			}
+			.public-title  img, .public-title h5 {
+				  float: left;
+			}
+			.public-title  img {
+				 vertical-align: middle;
+				 margin-right: 8px;
+			}
+
+			.public-title h5 {
+				 color: #7AB800;
+			}
+
+			/* 左侧图片显示 */
+			.product-img {
+				 width: 205px;
+				 height: 149px;
+				 margin: 0 auto;
+				 margin-top: 25px;
+
+				 position: relative;
+			}
+
+			.l-sj {
+				 position: absolute;
+				 left: 0;
+				 top: 60px;
+			}
+
+			.r-sj {
+				 position: absolute;
+				 right: 0;
+				 top: 60px;
+			}
+
+
+			.m-product ul {
+				 margin: 0 23px;
+				 margin-top: 10px;
+			}
+
+			.m-product li {
+				 height: 26px;
+				 line-height: 26px;
+				 border-bottom: 1px dashed #DCDCDC;
+			}
+
+			.m-product li a {
+				 color: #666666;
+
+			}
+			
+			.m-product li .ared {
+				 color: #FF0000;
+				 font-weight: 700;
+			}
+		
+
+			.r-product .public {
+				height: 14px;
+				border-left: 4px solid #98CB00;
+				margin-top: 7px;
+				margin-left: 28px;
+				padding-left: 5px;
+				line-height: 14px;
+				color: #666666;
+			}
+			
+			.r-product p {
+				 margin-left: 28px;
+				 margin-top: 42px;
+				 color: #666666;
+			}
+
+
+			/* 结尾部分 */
+			.footer {
+				 margin-top: 52px;
+			}
+
+			.footer .top {
+				 height: 221px;
+				 background-color: #2D2D2D;
+				 border-bottom: 1px dashed #414141;
+
+			}
+
+			.footer .bot {
+				background-color: #2D2D2D;
+				height: 74px;
+			}
+
+			.dl-list {
+				
+				 position: relative;
+
+			}
+
+			.dl-list dl {
+				 float: left;
+				 width: 125px;
+				 margin-top: 16px;
+			}
+
+			.dl-list dt {
+				  height: 33px;
+				  color: #C7C7C7;
+			}
+
+			.dl-list dd {
+				 height: 22px;
+				 color: #707070;
+			}
+
+			.dl-list img {
+				 position: absolute;
+				 right: 0;
+				 top: 0;
+			}
+			.bot {
+				 text-align: center;
+				 padding-top: 10px;
+			}
+			.bot p {
+				 margin-bottom: 10px;
+				 color: #000000;
+				 font-size: 16px;
+			}
+        </style>
+    </head>
+    <body>
+		
+		<!-- 头部开始 -->
+		<div class="header box clearfix">
+			
+			 <!-- 左侧logo部分 -->
+			 <div class="logo">
+			 	 <a href="#">尚合</a>
+			 </div>	
+			
+			 <!-- 右侧搜索 -->
+			 <div class="serch">
+			 	  <input type="text"  class="txt" value="请输入关键字">
+			 	  <input type="button" class="btn" >
+			 </div>
+		</div>
+		
+		<!-- 导航部分开始 -->
+		<div class="nav">
+			  <div class="box">
+			  	   <ul>
+			  	   	<li><a href="#">首页</a></li>
+			  	   	<li><a href="#">智能手机</a></li>
+			  	   	<li><a href="#">平板电脑</a></li>
+			  	   	<li><a href="#">配件</a></li>
+			  	   	<li><a href="#">服务与支持</a></li>
+			  	   	<li><a href="#">关于尚合</a></li>
+			  	   </ul>
+			  </div>
+		</div>
+		
+		<!-- Banner部分开始 -->
+		<div class="banner box">
+			<img src="images/banner.jpg">
+		</div>
+
+		 <!-- 新闻推送部分 -->
+		 <div class="news">
+		 	  <div class="box">
+
+		 	     <div class="news-title">
+		 	     	 <h5>最新公告：</h5>
+		 	  	     <p>尚合智能手机，尚合官网</p>
+		 	     </div>
+
+		 	     <div class="news-img">
+		 	     	 <img src="images/weibo.png">
+		 	     	 <img src="images/renren.png">
+		 	     	 <img src="images/zone.png">
+		 	     	 <img src="images/xinlang.png">
+		 	     </div>
+		 	  	 
+		 	  </div>
+		 </div>
+
+		 <!-- 产品列表 -->
+		 <div class="product box clearfix">
+		 		
+		 	  <!-- 左侧盒子 -->
+		 	  <div class="l-product">
+
+		 	  	  <div class="public-title clearfix">
+		 	  	  	 <img src="images/o.jpg">
+		 	  	  	 <h5>新品发布</h5>
+		 	  	  </div>
+
+		 	  	  <div class="product-img">
+		 	  	  	
+						 <img src="images/home_hot_01.png">
+
+						 <div class="l-sj">
+						 	<img src="images/left.png" >
+						 </div>
+
+						 <div class="r-sj">
+						 	<img src="images/right.png">
+						 </div>
+		 	  	  </div>
+
+		 	  </div>
+			  
+			  <!-- 中间盒子 -->
+		 	  <div class="m-product">
+		 	  	    <div class="public-title clearfix">
+		 	  	  	  <img src="images/o.jpg">
+		 	  	  	  <h5>新闻中心</h5>
+		 	  	    </div>
+
+		 	  	    <ul>
+		 	  	    	<li><a href="#" class="ared">致歉公告</a></li>
+		 	  	    	<li><a href="#">首批尚合已售罄</a></li>
+		 	  	    	<li><a href="#">产品通过ISO认证</a></li>
+		 	  	    	<li><a href="#">首批尚合已售罄</a></li>
+		 	  	    	<li><a href="#">首批尚合已售罄</a></li>
+		 	  	    	<li><a href="#">首批尚合已售罄</a></li>
+		 	  	    </ul>
+		 	  </div>
+		
+		      <!-- 右侧盒子 -->
+		 	  <div class="r-product">
+		 	  	    <div class="public-title clearfix">
+		 	  	  	  <img src="images/o.jpg">
+		 	  	  	  <h5>技术与支持</h5>
+		 	  	    </div>
+
+		 	  	    <div class="public">售后服务</div>
+		 	  	    <div class="public">投诉与建议</div>
+		 	  	    <div class="public">联保网点</div>
+		 	  	    <div class="public">常见问题FAQ?</div>
+				
+				    <p>
+				    	深圳市汇聚众合科技发展有限公司
+				    	<br>
+                        服务热线：400-633-7922
+				    </p>
+
+			
+		 	  </div>
+		 </div>
+
+		 <!-- 结尾部分 -->
+
+		 <div class="footer">
+		 	
+		 	  <div class="top">
+		 	  	   <div class="dl-list box">
+		 	  	   		
+		 	  	   		<dl>
+		 	  	   			<dt>尚合首页</dt>
+		 	  	   			<dd>返回首页</dd>
+		 	  	   		</dl>
+
+		 	  	   		<dl>
+		 	  	   			<dt>智能手机</dt>
+		 	  	   			<dd>苹果</dd>
+		 	  	   			<dd>华为</dd>
+		 	  	   			<dd>小米</dd>
+		 	  	   		</dl>
+
+		 	  	   		<dl>
+		 	  	   			<dt>平板电脑</dt>
+		 	  	   			<dd>苹果</dd>
+		 	  	   			<dd>小米</dd>
+		 	  	   			<dd>台电</dd>
+		 	  	   		</dl>
+
+		 	  	   		<dl>
+		 	  	   			<dt>服务与支持</dt>
+		 	  	   			<dd>售后服务</dd>
+		 	  	   			<dd>投诉与建议</dd>
+		 	  	   		</dl>
+
+
+		 	  	   		 <img src="images/index_161-175.gif">
+		 	  	   </div>
+		 	  </div>
+
+		 	  <div class="bot">
+		 	  	  <p>
+					深圳市汇聚众合科技发展有限公司
+					服务热线：400-633-7922
+				  </p>
+
+				  <p>
+				  	
+					 经营许可证号：粤ICP备10023234号-1
+				  </p>
+		 	  </div>
+		 </div>
+  
+    </body>
+</html>
